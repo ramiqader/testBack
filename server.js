@@ -4,6 +4,7 @@ const port = process.env.PORT || 3001; // or any other port you prefer
 
 app.get('/favourites', (req, res) => {
   // Handle your API logic here
+  res.set('Access-Control-Allow-Origin', '*');
   const data = { message: 'Hello from the server!' };
   res.json(data);
 });
