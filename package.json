@@ -4,12 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.1.2",
+    "vitest": "^3.1.2"
+  },
+  "vitest": {
+    "coverage": {
+      "enabled": true,
+      "provider": "v8",
+      "reporter": ["text", "html"]
+    }
   }
 }
