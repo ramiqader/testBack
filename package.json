@@ -17,10 +17,14 @@
     "vitest": "^3.1.2"
   },
   "vitest": {
+    "include": ["**/*.test.js"],
     "coverage": {
       "enabled": true,
       "provider": "v8",
-      "reporter": ["text", "html"]
+      "reporter": ["text", "html"],
+      "reportsDirectory": "./coverage",
+      "include": ["add.js", "**/*.js"],
+      "exclude": ["node_modules/", "coverage/", "**/*.test.js"]
     }
   }
 }
