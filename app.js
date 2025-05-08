@@ -7,7 +7,7 @@ app.get('/favourite', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send("hello world");
+  res.send("hello worlds");
 });
 
 export default app;

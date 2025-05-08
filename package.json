@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
-    "test": "vitest",
+    "test": "vitest run",
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
@@ -23,7 +23,7 @@
       "provider": "v8",
       "reporter": ["text", "html"],
       "reportsDirectory": "./coverage",
-      "include": ["add.js", "**/*.js"],
+      "include": ["**/*.js"],
       "exclude": ["node_modules/", "coverage/", "**/*.test.js"]
     }
   }

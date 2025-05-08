@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1746426296060" clover="3.2.0">
-  <project timestamp="1746426296060" name="All files">
+<coverage generated="1746429773849" clover="3.2.0">
+  <project timestamp="1746429773849" name="All files">
     <metrics statements="19" coveredstatements="4" conditionals="3" coveredconditionals="1" methods="3" coveredmethods="1" elements="25" coveredelements="6" complexity="0" loc="19" ncloc="19" packages="1" files="3" classes="3"/>
     <file name="add.js" path="/Users/ramiabdelqader/Desktop/testing/testBack/add.js">
       <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
