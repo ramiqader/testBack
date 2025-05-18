@@ -1,4 +1,4 @@
-import { add } from './math';
+import { add } from './add.js';
 
 jest.mock('express', () => ({
   request: jest.fn(),
