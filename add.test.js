@@ -16,6 +16,7 @@
 //   });
 import { describe, it, expect, vi } from 'vitest';
 import { add } from './add.js';
+import {app} from './app.js';
 
 describe('add function', () => {
   it('should add two numbers correctly', () => {
