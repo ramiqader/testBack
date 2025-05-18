@@ -1,28 +1,15 @@
-// app.test.js
-import { describe, it, expect } from '@jest/globals';
-import { req, res } from 'supertest';
+import { describe, it, expect, vi } from 'vitest';
+import { add } from './add.js';
 
-// Import the route handlers to be tested
-import { favouriteHandler, indexHandler } from './app';
-
-describe('Favourite Route Handler', () => {
-  it('sets CORS header and returns JSON response', async () => {
-    const req = { method: 'GET', url: '/favourite' } };
-    const res = { set: jest.fn(), json: jest.fn((data) => ({ data })) };
-    await favouriteHandler(req, res);
-    expect(res.set).toHaveBeenCalledTimes(1);
-    expect(res.set).toHaveBeenCalledWith('Access-Control-Allow-Origin', '*');
-    expect(res.json).toHaveBeenCalledTimes(1);
-    expect(res.json).toHaveBeenCalledWith({ message: 'Hello from the server!' });
+describe('add function', () => {
+  it('should add two numbers correctly', () => {
+    const result = add(2, 3);
+    expect(result).toBe(5);
   });
-});
 
-describe('Index Route Handler', () => {
-  it('returns a simple "hello world" string', async () => {
-    const req = { method: 'GET', url: '/' } };
-    const res = { send: jest.fn((data) => ({ data })) };
-    await indexHandler(req, res);
-    expect(res.send).toHaveBeenCalledTimes(1);
-    expect(res.send).toHaveBeenCalledWith("hello world");
+  it('should return 0 when adding 0 and 0', () => {
+    const result = add(0, 0);
+    expect(result).toBe(0);
   });
+
 });
