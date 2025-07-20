@@ -1,31 +1,18 @@
 {
-  "name": "my-react-node-app",
+  "name": "ramiqader/testBack",
   "version": "1.0.0",
-  "type": "module",
-  "main": "server.js",
-  "scripts": {
-    "dev": "node server.js",
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
-  },
+  "description": "Selective fix for 1 vulnerabilities",
   "dependencies": {
-    "express": "^4.19.2",
-    "ms": "^0.6.2"
+    "ms": "file:secure-libs/secure-ms"
   },
-  "devDependencies": {
-    "@vitest/coverage-v8": "^3.1.2",
-    "supertest": "^7.1.0",
-    "vitest": "^3.1.2"
+  "_selectiveFix": {
+    "selectedVulnerabilityIds": [
+      "node-modules-ms-index-js-41-Regular-Expression-Denial-of-Service-in-ms"
+    ],
+    "repoName": "ramiqader/testBack",
+    "branchName": "main"
   },
-  "vitest": {
-    "include": ["**/*.test.js"],
-    "coverage": {
-      "enabled": true,
-      "provider": "v8",
-      "reporter": ["text", "html"],
-      "reportsDirectory": "./coverage",
-      "include": ["add.js", "**/*.js"],
-      "exclude": ["node_modules/", "coverage/", "**/*.test.js"]
-    }
+  "overrides": {
+    "ms": "file:secure-libs/secure-ms"
   }
 }
