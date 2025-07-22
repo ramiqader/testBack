@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "express": "^4.19.2",
-    "ms": "^0.6.2"
+    "ms": "file:secure-libs/secure-ms"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^3.1.2",
@@ -18,14 +18,29 @@
     "vitest": "^3.1.2"
   },
   "vitest": {
-    "include": ["**/*.test.js"],
+    "include": [
+      "**/*.test.js"
+    ],
     "coverage": {
       "enabled": true,
       "provider": "v8",
-      "reporter": ["text", "html"],
+      "reporter": [
+        "text",
+        "html"
+      ],
       "reportsDirectory": "./coverage",
-      "include": ["add.js", "**/*.js"],
-      "exclude": ["node_modules/", "coverage/", "**/*.test.js"]
+      "include": [
+        "add.js",
+        "**/*.js"
+      ],
+      "exclude": [
+        "node_modules/",
+        "coverage/",
+        "**/*.test.js"
+      ]
     }
+  },
+  "overrides": {
+    "ms": "file:secure-libs/secure-ms"
   }
 }
